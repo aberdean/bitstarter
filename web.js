@@ -8,7 +8,7 @@ var HOME = "index.html";
 
 var message = function(file) {
   file = file || HOME;
-  var buf = new Buffer(nfs.readFileSync(file));
+  var buf = new Buffer(fs.readFileSync(file));
   return(buf.toString());
 };
 
