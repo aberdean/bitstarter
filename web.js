@@ -8,9 +8,9 @@ var HOME = "index.html";
 
 var message = function(file) {
   file = file || HOME;
-  var buf = fs.readFileSync(file);
-  return(buf.toString('utf-8')
-}
+  var buf = new Buffer(nfs.readFileSync(file));
+  return(buf.toString());
+};
 
 app.get('/', function(request, response) {
   response.send(message());
